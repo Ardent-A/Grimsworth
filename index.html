@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grimsworth</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=IM+Fell+English+SC&family=Port+Lligat+Sans&display=swap" 
+    rel="stylesheet" /> 
+
+    <!-- font-awesome -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body onmousedown="return false" onselectstart="return false">
+    <div id="overlay"></div>
+    <header>
+        <button class="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <aside class="sidebar">
+            <nav class="links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Lore</a></li>
+                    <li><a href="#">Roles</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="effect-container" id="effect">
+            <section class="hero">
+                <h1 id="trigger">Grimsworth</h1>
+                <p id="subheading">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+                <div class="button-container">
+                    <button id="read" onclick="window.location.href='#anchor-plot'">Read more</button>
+                    <button id="join" onclick="window.open('https://discord.gg/PAArG63Fpw')">Join the community</button>
+                </div>
+            </section>
+        </div>
+    </header>
+    <main id="main-body">
+        <section class="plot" id="anchor-plot">
+            <div class="flex-container plot-container" >
+                <div class="image">
+                </div>
+                <article id="synopsis">
+                    <h2>Tucked away in a hidden valley...</h2>
+                </article>
+            </div>
+            <!-- <img src="../img/crow.png" alt="Common crow" srcset=""> -->
+        </section>
+        <section class="roles">
+            <h2 id="choose-side">Choose a side...</h2>
+            <div class="flex-container roles-container">
+                <div class="card" id="founding-families">Founding Families</div>
+                <div class="card" id="hollows">Hollows of the Root</div>
+                <div class="card" id="outsiders">Outsiders</div>
+            </div>
+        </section>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>
