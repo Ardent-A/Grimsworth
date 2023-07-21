@@ -32,17 +32,15 @@ body {
     --transition: 0.3s linear;
 }
 
-header {
-    background: url("../img/foggyforest.jpg"), url("../img/fog.gif");
-    background-size: cover;
-    background-position: 50% 68%, 50% 40%;
-    background-blend-mode: hard-light;
-}
 
 #icon {
     width: 40px;
     height: 40px;
 }
+
+/* .fa-bars {
+    color: black;
+} */
 
 /*
 =============== 
@@ -51,14 +49,14 @@ Sidebar
 */
 .sidebar-toggle {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    padding: 5px 10px 5px 10px;
     font-size: 2rem;
     background: transparent;
     border-color: transparent;
     color: var(--main-color);
     transition: var(--transition);
     cursor: pointer;
+    z-index: 9;
   }
 
   .sidebar-toggle:hover {
@@ -89,7 +87,7 @@ Sidebar
     list-style-type: none;
     /* padding: 20px; */
   }
-  
+
 .links a {
     display: block;
     padding: 10px;
@@ -116,9 +114,9 @@ Sidebar
     padding-top: 20px;
     background: var(--main-color);
     box-shadow: var(--main-color);
-    transition: transform var(--transition);
-    transform: translate(-100%);
-    z-index: 9;
+    transition: translate var(--transition);
+    translate: -100%;
+    z-index: 10;
   }
 
   .overlay-on {
@@ -131,7 +129,7 @@ Sidebar
   }
 
   .show-sidebar {
-    transform: translate(0);
+    translate: 0;
   }
 
   @media screen and (min-width: 676px) {
@@ -150,7 +148,14 @@ End of Sidebar
     height: 75vh;
     display: grid;
     transition: background-color 0.5s linear;
-    padding: 10px;
+    /* padding: 10px; */
+}
+
+.bg {
+    background: url("../img/foggyforest.jpg"), url("../img/fog.gif");
+    background-size: cover;
+    background-position: 50% 68%, 50% 40%;
+    background-blend-mode: hard-light;
 }
 
 .hero {
@@ -181,6 +186,7 @@ h1:hover {
     font-size: 1.1rem;
     font-weight: 300;
     line-height: 1.6rem;
+    padding: 0 2vw 0 2vw;
 }
 
 .button-container {
@@ -330,27 +336,82 @@ h2 {
 
 @media screen and (min-width: 700px) {
     h1 {
-        font-size: 5.5rem;
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 1.8rem;
     }
     .plot {
         padding: 70px;
     }
+
+    /* NAV */
+    .header {
+        position: sticky;
+        top: 0;
+    }
+    .sidebar-toggle {
+        display: none;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        height: inherit;
+        padding: 0;
+        background: none;
+        translate: 0;
+        transition: translate 0.5s linear;
+    }
+    .scroll-background {
+        background-color: var(--accent-color);
+        transition: background-color 0.3s linear;
+        /* text-shadow: 1px 1px 2px white; */
+    }
+    
+    .links a {
+        padding: 15px;
+        color: var(--main-color);
+        transition: none;
+      }
+    
+      .links a:hover {
+        background: none;
+        color: rgb(194, 111, 111)
+      }
+
+      ul {
+        width: inherit;
+        display: flex;
+        gap: 10px;
+      }
+
 }
 
 @media screen and (min-width: 1220px) {
     h1 {
-        font-size: 6.5rem;
+        font-size: 4.5rem;
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
 
     #subheading {
         font-size: 1.3rem;
+        padding: 0;
     }
 
     .plot {
         padding: 100px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    h1 {
+        font-size: 6rem;
+    }
+    h2 {
+        font-size: 3rem;
     }
 }
