@@ -273,7 +273,7 @@ h1:hover {
 
 .effects {
     background-color: rgba(7, 7, 7, 0.384);
-    height: 75vh;
+    height: 100vh;
     transition: background-color 0.5s linear;
 }
 
