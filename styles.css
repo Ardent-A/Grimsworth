@@ -38,6 +38,11 @@ body {
     height: 40px;
 }
 
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
 /* .fa-bars {
     color: black;
 } */
@@ -144,18 +149,24 @@ End of Sidebar
 ===============
 */
 
-.effect-container {
-    height: 75vh;
-    display: grid;
-    transition: background-color 0.5s linear;
-    /* padding: 10px; */
+.hero-height {
+    /* height: 75vh; */
+    height: 100vh;
+}
+
+.full-height {
+    height: 100vh;
+    background-attachment: fixed;
+    overflow-y: scroll;
 }
 
 .bg {
+    display: grid;
     background: url("../img/foggyforest.jpg"), url("../img/fog.gif");
     background-size: cover;
     background-position: 50% 68%, 50% 40%;
     background-blend-mode: hard-light;
+    transition: background-color 0.5s linear;
 }
 
 .hero {
@@ -163,16 +174,55 @@ End of Sidebar
     font-family: var(--secondaryFont);
 }
 
+/* LORE PAGES */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.table {
+    position: relative;
+    top: 55px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.712);
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    font-family: var(--secondaryFont);
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.flex-table {
+    flex: 1;
+    min-width: 250px;
+    padding: clamp(10px, 3vw, 30px);
+}
+
+aside > ul > li > a {
+    color: #fff;
+}
+
+aside > ul > li > a:hover {
+    color: rgb(231, 63, 63);
+}
+
+.flex-article {
+    flex: 3;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.945);
+    border: 1px solid rgba(0, 0, 0, 0.247);
+    padding: clamp(10px, 3vw, 30px);
+    color: black;
+    font-size: 1rem;
+}
+/* END OF LORE PAGES */
+
 h1 {
     font-family: var(--mainFont);
     font-size: 3.5rem;
     color: var(--main-color);
     letter-spacing: 3px;
     transition: text-shadow 0.5s linear;
-    text-align: center;
-}
-
-p {
     text-align: center;
 }
 
@@ -187,6 +237,7 @@ h1:hover {
     font-weight: 300;
     line-height: 1.6rem;
     padding: 0 2vw 0 2vw;
+    text-align: center;
 }
 
 .button-container {
@@ -246,11 +297,16 @@ h1:hover {
 
 h2 {
     font-family: var(--mainFont);
+    /* font-size: var(1.5rem, 1vw, 2rem); */
     font-size: 2rem;
     color: var(--accent-color);
     font-variant: small-caps;
     letter-spacing: 2px;
     text-align: center;
+}
+
+h3 {
+    color: var(--accent-color);
 }
 
 .image {
@@ -347,7 +403,7 @@ h2 {
 
     /* NAV */
     .header {
-        position: sticky;
+        /* position: sticky; */
         top: 0;
     }
     .sidebar-toggle {
@@ -380,11 +436,16 @@ h2 {
         color: rgb(194, 111, 111)
       }
 
-      ul {
+      nav > ul {
         width: inherit;
         display: flex;
         gap: 10px;
       }
+
+      .table {
+        width: 700px;
+        padding: clamp(10px, 2vw, 30px);
+    }
 
 }
 
@@ -405,6 +466,10 @@ h2 {
     .plot {
         padding: 100px;
     }
+
+    .table {
+        width: 900px;
+    }
 }
 
 @media screen and (min-width: 2000px) {
@@ -413,5 +478,8 @@ h2 {
     }
     h2 {
         font-size: 3rem;
+    }
+    .table {
+        width: 1200px;
     }
 }

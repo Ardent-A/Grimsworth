@@ -30,7 +30,7 @@
             <nav class="links">
                 <ul>
                     <li><a class="link" href="./index.html">Home</a></li>
-                    <li><a class="link" href="./about.html">About</a></li>
+                    <li><a class="link" href="#">About</a></li>
                     <li><a class="link" href="./lore.html">Lore</a></li>
                 </ul>
             </nav>
@@ -42,11 +42,31 @@
             <p id="subheading">
                 Here in this town that never changes, nothing is what it seems.  The rules are obscure, the lessons peculiar and at times even distressing, and the people who live here want us all dead.</p>
             <div class="button-container">
-                <button id="read" onclick="window.location.href='./lore.html'">Read more</button>
+                <button id="read" onclick="window.location.href='#anchor-plot'">Read more</button>
                 <button id="join" onclick="window.open('https://discord.gg/PAArG63Fpw')">Join the community</button>
             </div>
         </section>
     </div>
+    <main id="main-body">
+        <section class="plot" id="anchor-plot">
+            <div class="flex-container plot-container" >
+                <div class="image">
+                </div>
+                <article id="synopsis">
+                    <h2>Tucked away in a hidden valley...</h2>
+                </article>
+            </div>
+            <!-- <img src="../img/crow.png" alt="Common crow" srcset=""> -->
+        </section>
+        <section class="roles">
+            <h2 id="choose-side">Choose a side...</h2>
+            <div class="flex-container roles-container">
+                <div class="card" id="founding-families">Founding Families</div>
+                <div class="card" id="hollows">Hollows of the Root</div>
+                <div class="card" id="outsiders">Outsiders</div>
+            </div>
+        </section>
+    </main>
     <script src="../script.js"></script>
 </body>
 </html>
